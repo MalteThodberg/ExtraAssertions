@@ -1,0 +1,26 @@
+---
+title: "ExtraAssertions"
+author: "Malte Thodberg"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+The ExtraAssertions package includes a number of useful functions that can be used with Hadley's `assertthat` package.
+
+Install from github using the `devtools` package:
+
+```{r, eval=FALSE}
+install.packages("assertthat")
+devtools::install_github("MalteThodberg/ExtraAssertions")
+```
+
+The currently implemented new assertions are:
+
+- `has_colnames` & `has_rownames`: Checks whether object has column or row names.
+- `in_option`: Checks whether object is a single value from a collection of valid options.
+- `is_fullrank`: Checks whether the object is a full rank matrix 
+- `is_fullrank`: Checks whether the object is a full rank matrix with an intercept term as the first column.
