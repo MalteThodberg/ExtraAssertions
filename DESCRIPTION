@@ -1,0 +1,12 @@
+Package: ExtraAssertions
+Type: Package
+Title: Extra assertions to use with Hadley's assertthat
+Version: 0.1.0
+Author: Malte Thodberg
+Maintainer: <maltethodberg@gmail.com>
+Description: Adds assertions for checking function arguments, rownames &
+    colnames, and design matrices.
+Imports: assertthat
+License: GPL-3
+LazyData: TRUE
+RoxygenNote: 5.0.1
