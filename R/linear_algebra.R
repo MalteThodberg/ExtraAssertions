@@ -8,7 +8,8 @@
 #' @export
 is_fullrank <- function(x){
 	assert_that(is.matrix(x))
-	qr(x)$rank <= ncol(x)
+	assert_that(not_empty(x))
+	qr(x)$rank >= ncol(x)
 }
 assertthat::on_failure(is_fullrank) <- function(call, env) {
 	paste0(deparse(call$x), " is not full rank!")
@@ -23,7 +24,6 @@ assertthat::on_failure(is_fullrank) <- function(call, env) {
 #' @return TRUE or FALSE
 #' @export
 has_intercept <- function(x){
-	assert_that(is.matrix(x))
 	assert_that(is_fullrank(x))
 
 	vals <- unique(x[,1])
