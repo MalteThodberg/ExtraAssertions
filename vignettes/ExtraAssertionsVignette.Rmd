@@ -22,5 +22,6 @@ The currently implemented new assertions are:
 
 - `has_colnames` & `has_rownames`: Checks whether object has column or row names.
 - `in_option`: Checks whether object is a single value from a collection of valid options.
+- `is_class`: Checks whether object is a class from a collection of valid options.
 - `is_fullrank`: Checks whether the object is a full rank matrix 
 - `is_fullrank`: Checks whether the object is a full rank matrix with an intercept term as the first column.

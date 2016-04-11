@@ -14,3 +14,19 @@ in_option <- function(x, options) {
 assertthat::on_failure(in_option) <- function(call, env) {
 	paste0(deparse(call$x), " is not in possible options: ", deparse(call$options))
 }
+
+#' Check if object is valid class
+#'
+#' Checks whether the object is valid class.
+#'
+#' @param x value.
+#' @param options possible classes for x.
+#' @import assertthat
+#' @return TRUE or FALSE
+#' @export
+is_class <- function(x, options) {
+	class(x) %in% options
+}
+assertthat::on_failure(is_class) <- function(call, env) {
+	paste0(deparse(call$x), "is not an object of class: ", deparse(call$options))
+}
